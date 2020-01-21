@@ -1,20 +1,69 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+    <div class="container pt-4">
+        <div class="text-center">
+            <h1>
+                Pretty Date Demo
+            </h1>
+        </div>
+        <div class="mt-4">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Input</th>
+                        <th scope="col">Output</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Date object</td>
+                        <td>{{justnow | prettyDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date object minus one minute</td>
+                        <td>{{aMinAgo | prettyDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date object minus 5 minute</td>
+                        <td>{{fewMinAgo | prettyDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date object minus 1 hour</td>
+                        <td>{{anHourAgo | prettyDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date object minus 5 hours</td>
+                        <td>{{fewHoursAgo | prettyDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date object minus 1 day</td>
+                        <td>{{yesterday | prettyDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date object minus 4 days</td>
+                        <td>{{fewDays | prettyDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date object minus 17 days</td>
+                        <td>{{manyDays | prettyDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date object minus 45 days</td>
+                        <td>{{manyMonths | prettyDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Date object minus 366 days</td>
+                        <td>{{manyYears | prettyDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>2019-12-24T06:18:44</td>
+                        <td>{{'2019-12-24T06:18:44' | prettyDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>Text String</td>
+                        <td>{{'String' | prettyDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-

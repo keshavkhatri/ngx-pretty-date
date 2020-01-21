@@ -27,7 +27,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+                "node_modules/bootstrap/scss/bootstrap.scss", 
+                "src/styles.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -128,6 +129,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "NgxPrettyDate": {
+      "root": "projects/ngx-pretty-date",
+      "sourceRoot": "projects/ngx-pretty-date/src",
+      "projectType": "library",
+      "prefix": "PrettyDate",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-pretty-date/tsconfig.lib.json",
+            "project": "projects/ngx-pretty-date/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-pretty-date/src/test.ts",
+            "tsConfig": "projects/ngx-pretty-date/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-pretty-date/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-pretty-date/tsconfig.lib.json",
+              "projects/ngx-pretty-date/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
