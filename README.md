@@ -1,27 +1,52 @@
-# PrettyDate
+# Angular Pretty Date
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+Facebook, twitter like date conversion in Angular using angular pipes. Supports angular 8. 
 
-## Development server
+Check out the [demo](http://https://keshavkhatri.github.io/angular8-with-ssr "demo")
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Getting Started
 
-## Code scaffolding
+#### Install via npm
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> npm install --save ngx-pretty-date
 
-## Build
+#### Import the module
+    import { NgxPrettyDateModule } from 'ngx-pretty-date';
+    
+    @NgModule({
+      declarations: [
+        ...
+      ],
+      imports: [
+        ...
+        NgxPrettyDateModule
+      ],
+      bootstrap: [...]
+    })
+    export class AppModule { }
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+#### Use in components
+    <span> {{dateObj | prettyDate}} </span>
 
-## Running unit tests
+#### Examples
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+|   Input |  Output |
+| :------------: | :------------: |
+| Date object  | just now  |
+| Date object minus one minute  | 1 minute ago  |
+| Date object minus 5 minute  | 5 minutes ago  |
+| Date object minus 1 hour  | 1 hour ago   |
+| Date object minus 5 hours  | 5 hours ago  |
+| Date object minus 1 day  | Yesterday  |
+| Date object minus 4 days | 4 days ago  |
+| Date object minus 17 days  | 3 weeks ago  |
+| Date object minus 45 days  | 2 months ago  |
+| Date object minus 366 days  | more than a year ago  |
+| 2019-12-24T06:18:44  | 5 weeks ago  |
+| Text String   | Invalid Date  |
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Running the demo app
+    cd projectRoot
+    npm install
+    ng serve
