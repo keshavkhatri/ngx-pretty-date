@@ -2,7 +2,7 @@
 
 Facebook, twitter like date conversion in Angular using angular pipes. Supports angular 8. 
 
-Check out the [demo](http://https://keshavkhatri.github.io/angular8-with-ssr "demo")
+Check out the [demo](https://keshavkhatri.github.io/ngx-pretty-date "demo")
 
 ## Getting Started
 
