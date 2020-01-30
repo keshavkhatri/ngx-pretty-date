@@ -15,48 +15,52 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Date object</td>
+                        <td>Date object with current time</td>
                         <td>{{justnow | prettyDate}}</td>
                     </tr>
                     <tr>
-                        <td>Date object minus one minute</td>
+                        <td>Till 60 seconds</td>
                         <td>{{aMinAgo | prettyDate}}</td>
                     </tr>
                     <tr>
-                        <td>Date object minus 5 minute</td>
+                        <td>2 to 59 minutes</td>
                         <td>{{fewMinAgo | prettyDate}}</td>
                     </tr>
                     <tr>
-                        <td>Date object minus 1 hour</td>
+                        <td>60 minutes</td>
                         <td>{{anHourAgo | prettyDate}}</td>
                     </tr>
                     <tr>
-                        <td>Date object minus 5 hours</td>
+                        <td>2 to 23 hours</td>
                         <td>{{fewHoursAgo | prettyDate}}</td>
                     </tr>
                     <tr>
-                        <td>Date object minus 1 day</td>
+                        <td>24 hours</td>
                         <td>{{yesterday | prettyDate}}</td>
                     </tr>
                     <tr>
-                        <td>Date object minus 4 days</td>
+                        <td>2 to 6 days</td>
                         <td>{{fewDays | prettyDate}}</td>
                     </tr>
                     <tr>
-                        <td>Date object minus 17 days</td>
+                        <td>7 days</td>
+                        <td>{{weekago | prettyDate}}</td>
+                    </tr>
+                    <tr>
+                        <td>8 to 30 days</td>
                         <td>{{manyDays | prettyDate}}</td>
                     </tr>
                     <tr>
-                        <td>Date object minus 45 days</td>
+                        <td>30 days to 365 days</td>
                         <td>{{manyMonths | prettyDate}}</td>
                     </tr>
                     <tr>
-                        <td>Date object minus 366 days</td>
+                        <td>more than 365 days</td>
                         <td>{{manyYears | prettyDate}}</td>
                     </tr>
                     <tr>
-                        <td>2019-12-24T06:18:44</td>
-                        <td>{{'2019-12-24T06:18:44' | prettyDate}}</td>
+                        <td>Date string 2020-01-24T06:18:44</td>
+                        <td>{{'2020-01-24' | prettyDate:'yyyy/mm/dd'}}</td>
                     </tr>
                     <tr>
                         <td>Text String</td>

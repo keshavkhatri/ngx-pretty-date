@@ -4,6 +4,24 @@ Facebook, twitter like date conversion in Angular using angular pipes. Supports 
 
 Check out the [demo](https://keshavkhatri.github.io/ngx-pretty-date "demo")
 
+#### Examples
+
+|   Input |  Output |
+| :------------: | :------------: |
+| Current time  | just now  |
+| Till 60 seconds  | 1 minute ago  |
+| 2 to 59 minutes  | X minutes ago  |
+| 60 minutes  | 1 hour ago   |
+| 2 to 23 hours  | X hours ago  |
+| 24 hours  | Yesterday  |
+| 2 to 6 days | X days ago  |
+| 7 days | 1 week ago  |
+| 8 to 30 days | X weeks ago  |
+| 30 days to 365 days | X months ago  |
+| more than 365 days  | more than a year ago  |
+| Date string 2019-12-24T06:18:44  | 5 weeks ago  |
+| Text String  | Invalid Date  |
+
 ## Getting Started
 
 #### Install via npm
@@ -28,23 +46,7 @@ Check out the [demo](https://keshavkhatri.github.io/ngx-pretty-date "demo")
 #### Use in components
     <span> {{dateObj | prettyDate}} </span>
 
-#### Examples
-
-|   Input |  Output |
-| :------------: | :------------: |
-| Date object  | just now  |
-| Date object minus one minute  | 1 minute ago  |
-| Date object minus 5 minute  | 5 minutes ago  |
-| Date object minus 1 hour  | 1 hour ago   |
-| Date object minus 5 hours  | 5 hours ago  |
-| Date object minus 1 day  | Yesterday  |
-| Date object minus 4 days | 4 days ago  |
-| Date object minus 17 days  | 3 weeks ago  |
-| Date object minus 45 days  | 2 months ago  |
-| Date object minus 366 days  | more than a year ago  |
-| 2019-12-24T06:18:44  | 5 weeks ago  |
-| Text String   | Invalid Date  |
-
+You can pass javascript date object or string like this '2019-12-24T06:18:44'
 
 #### Running the demo app
     cd projectRoot

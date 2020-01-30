@@ -2,13 +2,35 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'prettyDate' })
 export class PrettyDate implements PipeTransform {
-    transform(time: any): string {
+    transform(time: any, dateFormat: any): string {
         var date;
 
         if (time instanceof Date) {
             date = time;
         } else {
-            date = new Date((time || "").replace(/-/g, "/").replace(/[T]/g, " "));
+            var temp = (time || "").replace(/-/g, "/").replace(/[T]/g, " ").split(" ");
+            var time = temp[1] ? temp[1] : '';
+            var dateTemp = temp[0];
+            if(dateFormat != undefined){
+                dateTemp = dateTemp.split('/');
+                switch (dateFormat) {
+                    case 'dd/mm/yyyy':
+                        dateTemp = dateTemp[2]+'/'+dateTemp[1]+'/'+dateTemp[0]+' '+time;
+                        break;
+                    case 'mm/dd/yyyy':
+                        dateTemp = dateTemp[2] + '/' + dateTemp[0] + '/' + dateTemp[1] + ' ' + time;
+                        break;
+                    case 'yyyy/mm/dd':
+                        dateTemp = dateTemp[0] + '/' + dateTemp[1] + '/' + dateTemp[2] + ' ' + time;
+                        break;
+                    case 'yyyy/dd/mm':
+                        dateTemp = dateTemp[0] + '/' + dateTemp[2] + '/' + dateTemp[1] + ' ' + time;
+                        break;
+                    default:
+                        break;
+                }
+            }
+            date = new Date(dateTemp);
         }
 
         try{

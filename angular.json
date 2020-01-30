@@ -4,10 +4,10 @@
   "newProjectRoot": "projects",
   "projects": {
     "PrettyDate": {
-      "root": "projects/ngx-pretty-date",
-      "sourceRoot": "projects/ngx-pretty-date/src",
-      "projectType": "library",
-      "prefix": "lib",
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -15,9 +15,9 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/PrettyDate",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",

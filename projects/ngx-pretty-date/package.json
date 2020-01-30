@@ -15,7 +15,10 @@
         "beautiful date",
         "ngx",
         "ngx date pipe",
-        "angular pretty date"
+        "angular pretty date",
+        "timeago",
+        "time-ago",
+        "pipe"
     ],
     "author": "Keshav Khatri <keshu88khatri@gmail.com>",
     "license": "MIT",

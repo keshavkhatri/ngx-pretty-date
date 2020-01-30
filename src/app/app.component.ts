@@ -13,6 +13,7 @@ export class AppComponent {
     fewHoursAgo = new Date();
     yesterday = new Date();
     fewDays = new Date();
+    weekago = new Date();
     manyDays = new Date();
     manyMonths = new Date();
     manyYears = new Date();
@@ -24,6 +25,7 @@ export class AppComponent {
         this.fewHoursAgo.setHours(this.fewHoursAgo.getHours() - 5);
         this.yesterday.setDate(this.yesterday.getDate() - 1);
         this.fewDays.setDate(this.fewDays.getDate() - 4);
+        this.weekago.setDate(this.weekago.getDate() - 7);
         this.manyDays.setDate(this.manyDays.getDate() - 17);
         this.manyMonths.setDate(this.manyMonths.getDate() - 45);
         this.manyYears.setDate(this.manyYears.getDate() - 366);
