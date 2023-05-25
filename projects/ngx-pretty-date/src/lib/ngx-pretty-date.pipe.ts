@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'prettyDate' })
 export class PrettyDate implements PipeTransform {
-    transform(time: any, dateFormat: any): string {
+    transform(time: any, dateFormat: any): any {
         var date;
 
         if (time instanceof Date) {
@@ -11,11 +11,11 @@ export class PrettyDate implements PipeTransform {
             var temp = (time || "").replace(/-/g, "/").replace(/[T]/g, " ").split(" ");
             var time = temp[1] ? temp[1] : '';
             var dateTemp = temp[0];
-            if(dateFormat != undefined){
+            if (dateFormat != undefined) {
                 dateTemp = dateTemp.split('/');
                 switch (dateFormat) {
                     case 'dd/mm/yyyy':
-                        dateTemp = dateTemp[2]+'/'+dateTemp[1]+'/'+dateTemp[0]+' '+time;
+                        dateTemp = dateTemp[2] + '/' + dateTemp[1] + '/' + dateTemp[0] + ' ' + time;
                         break;
                     case 'mm/dd/yyyy':
                         dateTemp = dateTemp[2] + '/' + dateTemp[0] + '/' + dateTemp[1] + ' ' + time;
@@ -33,10 +33,10 @@ export class PrettyDate implements PipeTransform {
             date = new Date(dateTemp);
         }
 
-        try{
+        try {
             var diff = (((new Date()).getTime() - date.getTime()) / 1000);
             var day_diff = Math.floor(diff / 86400);
-        } catch(e){
+        } catch (e) {
             return "Invalid Date";
         }
 

@@ -1,73 +1,73 @@
 <div class="container">
-    <div class="container pt-4">
-        <div class="text-center">
-            <h1>
-                Pretty Date Demo
-            </h1>
-        </div>
-        <div class="mt-4">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Input</th>
-                        <th scope="col">Output</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Date object with current time</td>
-                        <td>{{justnow | prettyDate}}</td>
-                    </tr>
-                    <tr>
-                        <td>Till 60 seconds</td>
-                        <td>{{aMinAgo | prettyDate}}</td>
-                    </tr>
-                    <tr>
-                        <td>2 to 59 minutes</td>
-                        <td>{{fewMinAgo | prettyDate}}</td>
-                    </tr>
-                    <tr>
-                        <td>60 minutes</td>
-                        <td>{{anHourAgo | prettyDate}}</td>
-                    </tr>
-                    <tr>
-                        <td>2 to 23 hours</td>
-                        <td>{{fewHoursAgo | prettyDate}}</td>
-                    </tr>
-                    <tr>
-                        <td>24 hours</td>
-                        <td>{{yesterday | prettyDate}}</td>
-                    </tr>
-                    <tr>
-                        <td>2 to 6 days</td>
-                        <td>{{fewDays | prettyDate}}</td>
-                    </tr>
-                    <tr>
-                        <td>7 days</td>
-                        <td>{{weekago | prettyDate}}</td>
-                    </tr>
-                    <tr>
-                        <td>8 to 30 days</td>
-                        <td>{{manyDays | prettyDate}}</td>
-                    </tr>
-                    <tr>
-                        <td>30 days to 365 days</td>
-                        <td>{{manyMonths | prettyDate}}</td>
-                    </tr>
-                    <tr>
-                        <td>more than 365 days</td>
-                        <td>{{manyYears | prettyDate}}</td>
-                    </tr>
-                    <tr>
-                        <td>Date string 2020-01-24T06:18:44</td>
-                        <td>{{'2020-01-24' | prettyDate:'yyyy/mm/dd'}}</td>
-                    </tr>
-                    <tr>
-                        <td>Text String</td>
-                        <td>{{'String' | prettyDate}}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+  <div class="container pt-4">
+    <div class="text-center">
+      <h1>
+        Pretty Date Demo
+      </h1>
     </div>
+    <div class="mt-4">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Input</th>
+            <th scope="col">Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Date object with current time</td>
+            <td>{{justnow | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+          <tr>
+            <td>Till 60 seconds</td>
+            <td>{{aMinAgo | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+          <tr>
+            <td>2 to 59 minutes</td>
+            <td>{{fewMinAgo | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+          <tr>
+            <td>60 minutes</td>
+            <td>{{anHourAgo | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+          <tr>
+            <td>2 to 23 hours</td>
+            <td>{{fewHoursAgo | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+          <tr>
+            <td>24 hours</td>
+            <td>{{yesterday | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+          <tr>
+            <td>2 to 6 days</td>
+            <td>{{fewDays | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+          <tr>
+            <td>7 days</td>
+            <td>{{weekago | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+          <tr>
+            <td>8 to 30 days</td>
+            <td>{{manyDays | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+          <tr>
+            <td>30 days to 365 days</td>
+            <td>{{manyMonths | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+          <tr>
+            <td>more than 365 days</td>
+            <td>{{manyYears | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+          <tr>
+            <td>Date string 2020-01-24T06:18:44</td>
+            <td>{{'2020-01-24' | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+          <tr>
+            <td>Text String</td>
+            <td>{{'String' | prettyDate:'dd/mm/yyyy'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

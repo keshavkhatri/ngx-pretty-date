@@ -1,33 +1,37 @@
 {
-    "name": "ngx-pretty-date",
-    "version": "1.0.0",
-    "description": "Angular js pipe for facebook, twitter like date time format, supports angular 8",
-    "peerDependencies": {
-        "@angular/common": "^12.2.0",
-        "@angular/core": "^12.2.0"
-    },
-    "keywords": [
-        "Angular",
-        "date",
-        "date pipe",
-        "pretty date",
-        "facebook like date",
-        "beautiful date",
-        "ngx",
-        "ngx date pipe",
-        "angular pretty date",
-        "timeago",
-        "time-ago",
-        "pipe"
-    ],
-    "author": "Keshav Khatri <keshu88khatri@gmail.com>",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/keshavkhatri/ngx-pretty-date.git"
-    },
-    "homepage": "https://keshavkhatri.github.io/ngx-pretty-date/",
-    "bugs": {
-        "url": "https://github.com/keshavkhatri/ngx-pretty-date/issues"
-    }
+  "name": "ngx-pretty-date",
+  "version": "1.1.1",
+  "description": "Angular js pipe for facebook, twitter like date time format, supports angular 8",
+  "peerDependencies": {
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "keywords": [
+    "Angular",
+    "date",
+    "date pipe",
+    "pretty date",
+    "facebook like date",
+    "beautiful date",
+    "ngx",
+    "ngx date pipe",
+    "angular pretty date",
+    "timeago",
+    "time-ago",
+    "pipe"
+  ],
+  "author": "Keshav Khatri <keshu88khatri@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keshavkhatri/ngx-pretty-date.git"
+  },
+  "homepage": "https://keshavkhatri.github.io/ngx-pretty-date/",
+  "bugs": {
+    "url": "https://github.com/keshavkhatri/ngx-pretty-date/issues"
+  },
+  "sideEffects": false
 }
