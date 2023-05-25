@@ -44,7 +44,7 @@ Check out the [demo](https://keshavkhatri.github.io/ngx-pretty-date "demo")
     export class AppModule { }
 
 #### Use in components
-    <span> {{dateObj | prettyDate}} </span>
+    <span> {{dateObj | prettyDate:'dd/mm/yyyy'}} </span>
 
 You can pass javascript date object or string like this '2019-12-24T06:18:44'
 
